@@ -1,108 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV - Jean Dupont</title>
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333;
+      --accent-color: #2c3e50;
+      --card-bg: #f4f4f9;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --accent-color: #00bcd4;
+      --card-bg: #2a2a2a;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: var(--card-bg);
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      padding: 8px 16px;
+      border: none;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #1a252f;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 30px 20px;
-      background-color: #fff;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      margin-top: 40px;
-      border-radius: 12px;
-    }
-
-    h1, h2 {
-      color: #2c3e50;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      margin-bottom: 20px;
-      color: #555;
+      padding: 20px;
     }
 
     .section {
       margin-bottom: 30px;
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: var(--accent-color);
     }
 
     ul {
       padding-left: 20px;
     }
 
-    li {
-      margin-bottom: 8px;
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #999;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8em;
-      }
-
-      .container {
-        padding: 20px 15px;
+      nav {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <header>
     <h1>Jean Dupont</h1>
-    <div class="contact">
-      <p><strong>Email :</strong> jean.dupont@email.com</p>
-      <p><strong>Téléphone :</strong> 06 00 00 00 00</p>
-      <p><strong>LinkedIn :</strong> linkedin.com/in/jeandupont</p>
-    </div>
+    <p>Développeur Web | Front-End & UI/UX</p>
+  </header>
 
-    <div class="section">
+  <nav>
+    <button onclick="showSection('about')">À propos</button>
+    <button onclick="showSection('experience')">Expérience</button>
+    <button onclick="showSection('education')">Formation</button>
+    <button onclick="showSection('skills')">Compétences</button>
+    <button onclick="toggleTheme()">🌙/☀️</button>
+  </nav>
+
+  <div class="container">
+    <div id="about" class="section">
       <h2>À propos</h2>
-      <p>Développeur web passionné avec 3 ans d'expérience en HTML, CSS, JavaScript et React. J'aime créer des interfaces élégantes et performantes.</p>
+      <p>Développeur web passionné avec 3+ années d'expérience. J'aime transformer des idées en expériences utilisateur interactives et esthétiques.</p>
     </div>
 
-    <div class="section">
+    <div id="experience" class="section" style="display:none;">
       <h2>Expérience professionnelle</h2>
       <ul>
-        <li><strong>2022 - aujourd'hui :</strong> Développeur Front-End chez TechCorp</li>
-        <li><strong>2020 - 2022 :</strong> Intégrateur Web chez WebDesign</li>
+        <li>🔹 2022 - Aujourd'hui : Développeur Front-End chez TechCorp</li>
+        <li>🔹 2020 - 2022 : Intégrateur Web chez WebDesign</li>
       </ul>
     </div>
 
-    <div class="section">
+    <div id="education" class="section" style="display:none;">
       <h2>Formation</h2>
       <ul>
-        <li>2019 : Licence Informatique - Université de Lyon</li>
+        <li>🎓 2019 : Licence Informatique - Université de Lyon</li>
       </ul>
     </div>
 
-    <div class="section">
+    <div id="skills" class="section" style="display:none;">
       <h2>Compétences</h2>
       <ul>
-        <li>HTML / CSS / JavaScript</li>
-        <li>React / Vue.js</li>
-        <li>Git / GitHub / API REST</li>
+        <li>✅ HTML / CSS / JavaScript</li>
+        <li>✅ React / Vue.js</li>
+        <li>✅ Git / GitHub / API REST</li>
       </ul>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Jean Dupont — CV interactif en HTML/CSS/JS
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = ['about', 'experience', 'education', 'skills'];
+      sections.forEach(sec => {
+        document.getElementById(sec).style.display = (sec === id) ? 'block' : 'none';
+      });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 
 </body>
 </html>
