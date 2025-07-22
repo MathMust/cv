@@ -1,165 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV - Jean Dupont</title>
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #333;
-      --accent-color: #2c3e50;
-      --card-bg: #f4f4f9;
-    }
-
-    body.dark {
-      --bg-color: #1e1e1e;
-      --text-color: #f0f0f0;
-      --accent-color: #00bcd4;
-      --card-bg: #2a2a2a;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-      background-color: var(--accent-color);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background-color: var(--card-bg);
-      padding: 10px;
-      flex-wrap: wrap;
-    }
-
-    nav button {
-      padding: 8px 16px;
-      border: none;
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    nav button:hover {
-      background-color: #1a252f;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .section {
-      margin-bottom: 30px;
-      background-color: var(--card-bg);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .section h2 {
-      margin-top: 0;
-      color: var(--accent-color);
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #999;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mathieu Mustin - Développeur Full Stack</title>
+  <link rel="stylesheet" href="style.css" id="theme-style">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <header>
-    <h1>Jean Dupont</h1>
-    <p>Développeur Web | Front-End & UI/UX</p>
-  </header>
-
-  <nav>
-    <button onclick="showSection('about')">À propos</button>
-    <button onclick="showSection('experience')">Expérience</button>
-    <button onclick="showSection('education')">Formation</button>
-    <button onclick="showSection('skills')">Compétences</button>
-    <button onclick="toggleTheme()">🌙/☀️</button>
-  </nav>
-
-  <div class="container">
-    <div id="about" class="section">
-      <h2>À propos</h2>
-      <p>Développeur web passionné avec 3+ années d'expérience. J'aime transformer des idées en expériences utilisateur interactives et esthétiques.</p>
-    </div>
-
-    <div id="experience" class="section" style="display:none;">
-      <h2>Expérience professionnelle</h2>
-      <ul>
-        <li>🔹 2022 - Aujourd'hui : Développeur Front-End chez TechCorp</li>
-        <li>🔹 2020 - 2022 : Intégrateur Web chez WebDesign</li>
+  <div class="cv-container" id="cv">
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <div class="initials">MM</div>
+      </div>
+      <h1>Mathieu Mustin</h1>
+      <h2>Développeur full stack / Analyste programmeur</h2>
+      <ul class="contact">
+        <li><i class="fas fa-phone"></i> 06 66 72 73 01</li>
+        <li><i class="fas fa-envelope"></i> mathieumustin@gmail.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> 62111 SOUASTRE</li>
+        <li><i class="fas fa-car"></i> Permis B, véhiculé</li>
+        <li><i class="fas fa-id-card"></i> RQTH</li>
       </ul>
-    </div>
 
-    <div id="education" class="section" style="display:none;">
-      <h2>Formation</h2>
-      <ul>
-        <li>🎓 2019 : Licence Informatique - Université de Lyon</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h3>Compétences</h3>
+        <ul class="tags">
+          <li>JavaScript</li><li>HTML</li><li>CSS</li><li>PHP</li>
+          <li>Java</li><li>Angular</li><li>TypeScript</li><li>jQuery</li>
+          <li>MySQL</li><li>PostgreSQL</li><li>Java</li><li>Thunderhead</li>
+          <li>XML</li><li>Drupal</li><li>Angular</li><li>TypeScript</li>
+          <li>PrimeNg</li><li>Thymeleaf</li>
+        </ul>
+      </div>
 
-    <div id="skills" class="section" style="display:none;">
-      <h2>Compétences</h2>
-      <ul>
-        <li>✅ HTML / CSS / JavaScript</li>
-        <li>✅ React / Vue.js</li>
-        <li>✅ Git / GitHub / API REST</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h3>Langues</h3>
+        <p>Français : natif</p>
+        <p>Anglais : intermédiaire (B1)</p>
+      </div>
+
+      <div class="section">
+        <h3>Centres d’intérêt</h3>
+        <ul>
+          <li>Sport mécanique</li>
+          <li>Jeux vidéo</li>
+          <li>VTT</li>
+          <li>Courses à pied</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <h2>Profil</h2>
+        <p>Développeur de logiciels expérimenté avec plus de 7 ans d'expérience dans l'industrie informatique, j'ai travaillé sur une large gamme de projets. Maîtrisant plusieurs langages de programmation et frameworks, j'ai une solide expérience dans l'analyse des besoins des utilisateurs, la conception de solutions logicielles robustes et la gestion efficace des projets de développement.</p>
+      </section>
+
+      <section>
+        <h2>Expérience</h2>
+
+        <div class="job">
+          <h3>CGI – Analyste programmeur - CDI</h3>
+          <span>05/2018 – Aujourd’hui</span>
+          <ul>
+            <li><h4>MTE (Ministère de la Transition Écologique)</h4>
+              <span>03/2025 – Aujourd’hui</span>
+              <p>À titre d'Analyste Technico fonctionnel pour le client MTE, pour le site FACE (Financement des Aides aux Collectivités pour l'Electrification rurale)</p>
+            </li>
+            <li><h4>MTE (Ministère de la Transition Écologique)</h4>
+              <span>01/2022 – 02/2025</span>
+              <p>À titre d'Analyste programmeur pour le client MTE, participation à la refonte et amélioration du site FACE (Financement des Aides aux Collectivités pour l'Electrification rurale)</p>
+            </li>
+            <li><h4>ANCV</h4>
+              <span>06/2021 – 01/2022</span>
+              <p>À titre d'Analyste programmeur pour le client MTE (Ministère de la Transition Écologique), participation à la refonte et amélioration du site FACE (Financement des Aides aux Collectivités pour l'Electrification rurale)</p>
+            </li>
+            <li><h4>Allianz</h4>
+              <span>05/2018 – 06/2021</span>
+              <p>À titre d'Analyste programmeur pour le client Allianz, participation à la dématérialisation de documents</p>
+                <ul>
+                  <li>Analyse fonctionnelle et technique</li>
+                  <li>Création et mise à niveau de documents (Thunderhead)</li>
+                  <li>Livraison et mise en Production des documents</li>
+                  <li>Mise à jour Base De Données</li>
+                  <li>Mise à niveau de l'application JAVA</li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>INNOV AND CO – Analyste programmeur - CDI</h3>
+          <span>11/2017 – 04/2018</span>
+          <p>À titre d'Analyste programmeur pour le client Allianz de l'entreprise CGI, participation à la dématérialisation de documents</p>
+          <ul class="m-0">
+            <li>Analyse fonctionnelle et technique</li>
+            <li>Création et mise à niveau de documents (Thunderhead)</li>
+            <li>Livraison et mise en Production des documents</li>
+            <li>Mise à jour Base De Données</li>
+            <li>Mise à niveau de l'application JAVA</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>WENIUS – Développeur Logiciels - Stage</h3>
+          <span>09/2016 – 11/2016</span>
+          <ul class="m-0">
+            <li>Création d'un formulaire d'inscription / connexion.</li>
+            <li>Créer une carte MapBox affichant 2 menus, l’un affichant les données des bus en temps réelle, l’autre affichant le nom des lignes cachant une case à cocher pour afficher les lignes voulues et les arrêts correspondants.</li>
+            <li>Créer un lien vers un formulaire permettant la recherche de fréquentation du bus et du nombre de fraudeurs sous forme d’historique par ligne, par bus, par arrêt et par période choisi, le tout sous forme de graphiques.</li>
+            <li>Créer un lien pour mettre fin à la session.</li>
+            <li>Créer une base de données libre permettant de gérer les données spatiales.</li>
+            <li>Récupérer les données géographiques des lignes et arrêts de bus de la ville d’Amiens, les enregistrer dans la base de données et les afficher sur une carte MapBox.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formation</h2>
+        <div class="job">
+          <h3>AFPA – Développeur Logiciels - Titre Professionnel de niveau III</h3>
+          <span>03/2016 – 08/2016</span>
+          <ul class="m-0">
+            <li>Développer des pages web riches basées sur HTML5, JQuery et requête Ajax. Générée par Framework MVC, Code Igniter, MySQL.</li>
+            <li>Développement d'un jeu de Memory en JQuery avec sauvegarde d'historique via requête Ajax, PHP objet.</li>
+            <li>Modélisation de bases de données sous Méthode Merise: MCD-MLD-MPD.</li>
+            <li>Déploiement et maintenance de base MySQL par script. Trigger, déclencheurs et procédures stockées.</li>
+            <li>Mise en oeuvre d'une solution de gestion de contenu ou e-commerce avec Prestashop.</li>
+            <li>Développer des composants d'accès aux données, utilisation de DAO en C#.</li>
+            <li>Maquetter une application, utilisation de méthode UML et Agile, SCRUM.</li>
+            <li>Développer une interface utilisateur: utilisation de Visual Studio, C# et WinForm.</li>
+            <li>Installations Système d’exploitation, logiciels et périphériques.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3>CFA Arras – CAP/BEP Carrossier - Spécialité Réparation</h3>
+          <span>10/2003 – 10/2005</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Autres expériences</h2>
+        <ul>
+          <li>Peintre industriel (2006–2015)</li>
+          <li>Carrossier Peintre (2003–2006)</li>
+        </ul>
+      </section>
+    </main>
   </div>
 
-  <footer>
-    &copy; 2025 Jean Dupont — CV interactif en HTML/CSS/JS
-  </footer>
+  <button onclick="generatePDF()" class="print-btn dl-btn">📄 Télécharger le CV en PDF</button>
 
-  <script>
-    function showSection(id) {
-      const sections = ['about', 'experience', 'education', 'skills'];
-      sections.forEach(sec => {
-        document.getElementById(sec).style.display = (sec === id) ? 'block' : 'none';
-      });
-    }
-
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 </body>
 </html>
