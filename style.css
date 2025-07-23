@@ -6,14 +6,6 @@
   --white: #fff;
 }
 
-[data-theme="dark"] {
-  --primary: #3a8fff;
-  --bg: #1e1e1e;
-  --text: #f1f1f1;
-  --accent: #2a2a2a;
-  --white: #2a2a2a;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -29,6 +21,7 @@ body {
 .cv-container {
   display: flex;
   min-height: 100vh;
+  margin-bottom: 25px;
 }
 
 /* Sidebar */
@@ -125,7 +118,6 @@ body {
 }
 
 .print-btn {
-  margin-top: 20px;
   background: var(--primary);
   color: white;
   border: none;
@@ -136,8 +128,17 @@ body {
 
 .dl-btn {
   position: fixed;
-  top: 925px;
-  left: 45px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1976d2;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .theme-toggle button {
@@ -165,4 +166,10 @@ body {
   .main-content {
     padding: 1rem;
   }
+
+  .dl-btn {
+    width: max-content;
+    padding: 10px;
+  }
+
 }

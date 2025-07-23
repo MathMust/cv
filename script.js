@@ -16,7 +16,7 @@ async function generatePDF() {
   // Utiliser html2canvas sur le clone
   const canvas = await html2canvas(clone, { scale: 2 });
 
-  const imgData = canvas.toDataURL('image/png');
+  const imgData = canvas.toDataURL('image/jpeg');
 
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('p', 'mm', 'a4');
