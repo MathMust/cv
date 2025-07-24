@@ -13,6 +13,14 @@ async function generatePDF() {
   // Appliquer des styles au clone uniquement
   clone.style.width = "43%";
 
+  if (window.innerWidth < 769) {
+    clone.style.flexDirection = "initial";
+    clone.children[0].style.width = "300px";
+    clone.children[0].style.borderRight = "1px solid #ddd";
+    clone.children[0].style.borderBottom = "none";
+    clone.children[1].style.padding = "2rem";
+  }
+
   // Utiliser html2canvas sur le clone
   const canvas = await html2canvas(clone, { scale: 2 });
 
